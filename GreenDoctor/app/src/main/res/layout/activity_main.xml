@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" >
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        android:orientation="vertical">
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+    android:orientation="horizontal">
+    <Button
+            android:id="@+id/mCameraButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonTakePhoto"
+            android:background="#186E00"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="32dp"
+
+            android:layout_marginLeft="20dp"
+           />
+    <Button
+            android:id="@+id/mGalleryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonSelectPhoto"
+            android:layout_marginTop="32dp"
+            android:background="#186E00"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="8dp"
+           />
+</LinearLayout>
+<androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="5dp"
+  >
+    <ImageView
+            android:id="@+id/mPhotoImageView"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:contentDescription="@string/descriptionImage"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@android:color/darker_gray"
+            android:layout_marginBottom="8dp"
+           />
+</androidx.cardview.widget.CardView>
+
+    <Button
+            android:text="@string/buttonDiagnose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mDetectButton"
+            android:background="#186E00"
+            android:textColor="#fff"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"/>
+    <TextView
+            android:text="@string/defaultImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/mResultTextView"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="32dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </LinearLayout>
+</RelativeLayout>
